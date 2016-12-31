@@ -80,10 +80,12 @@ class CategoryCell: UITableViewCell, UITableViewDelegate, UITableViewDataSource,
     // MARK: - Actions
     
     func deleteOnClick(sender: UIButton) {
-        let index = sender.tag
-        category.items.removeAtIndex(index)
-        delegate?.categoryCellUpdated()
-        tableView.reloadData()
+        if category.items.count > 1 {
+            let index = sender.tag
+            category.items.removeAtIndex(index)
+            delegate?.categoryCellUpdated()
+            tableView.reloadData()
+        }
     }
     
 }

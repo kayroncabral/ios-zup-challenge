@@ -21,8 +21,8 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número de categorias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeO-f6-LbC">
                                         <rect key="frame" x="0.0" y="0.0" width="476" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gtF-IF-rSi">
@@ -41,32 +41,32 @@
                                     <constraint firstAttribute="height" constant="30" id="Cqg-L8-9HH"/>
                                 </constraints>
                             </stackView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="159" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IOB-QV-hnO">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="154" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IOB-QV-hnO">
                                 <rect key="frame" x="0.0" y="110" width="600" height="430"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Category" rowHeight="154" id="zTP-xV-uce" customClass="CategoryCell" customModule="Zup_Challenge" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="154"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Category" rowHeight="170" id="zTP-xV-uce" customClass="CategoryCell" customModule="Zup_Challenge" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="170"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zTP-xV-uce" id="8RT-0B-kvr">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="154"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="170"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YOh-9N-sPi">
-                                                    <rect key="frame" x="8" y="0.0" width="584" height="154"/>
+                                                    <rect key="frame" x="8" y="8" width="584" height="154"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categoria" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lEZ-FZ-sM1">
                                                             <rect key="frame" x="0.0" y="0.0" width="584" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="wWy-pO-wFL"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QmU-UJ-zHd">
+                                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QmU-UJ-zHd">
                                                             <rect key="frame" x="0.0" y="29" width="584" height="87"/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <prototypes>
                                                                 <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Item" id="YqW-hQ-MdT" customClass="CategoryInnerCell" customModule="Zup_Challenge" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="28" width="584" height="44"/>
@@ -76,28 +76,29 @@
                                                                         <autoresizingMask key="autoresizingMask"/>
                                                                         <subviews>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="uSE-gu-WeK">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="584" height="44"/>
+                                                                                <rect key="frame" x="8" y="0.0" width="576" height="44"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IkG-6V-AXE">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="42" height="44"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaH-aQ-Y5D">
-                                                                                        <rect key="frame" x="539" y="0.0" width="45" height="44"/>
-                                                                                        <state key="normal" title="Delete"/>
+                                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaH-aQ-Y5D">
+                                                                                        <rect key="frame" x="540" y="0.0" width="36" height="44"/>
+                                                                                        <state key="normal" image="icDelete"/>
                                                                                     </button>
                                                                                 </subviews>
                                                                             </stackView>
                                                                         </subviews>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="trailing" secondItem="uSE-gu-WeK" secondAttribute="trailing" id="4Yw-p8-6QN"/>
                                                                             <constraint firstItem="uSE-gu-WeK" firstAttribute="top" secondItem="M2G-xt-zZO" secondAttribute="top" id="LFl-oP-ZDF"/>
-                                                                            <constraint firstItem="uSE-gu-WeK" firstAttribute="leading" secondItem="M2G-xt-zZO" secondAttribute="leading" id="ogR-8w-mkZ"/>
+                                                                            <constraint firstItem="uSE-gu-WeK" firstAttribute="leading" secondItem="M2G-xt-zZO" secondAttribute="leading" constant="8" id="ogR-8w-mkZ"/>
                                                                             <constraint firstAttribute="bottom" secondItem="uSE-gu-WeK" secondAttribute="bottom" id="xNL-UB-De1"/>
                                                                         </constraints>
                                                                     </tableViewCellContentView>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                     <connections>
                                                                         <outlet property="deleteButton" destination="uaH-aQ-Y5D" id="e3c-m8-okX"/>
                                                                         <outlet property="title" destination="IkG-6V-AXE" id="EhF-9c-Ljy"/>
@@ -129,10 +130,10 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="YOh-9N-sPi" firstAttribute="top" secondItem="8RT-0B-kvr" secondAttribute="top" id="ABq-Xn-Og4"/>
+                                                <constraint firstItem="YOh-9N-sPi" firstAttribute="top" secondItem="8RT-0B-kvr" secondAttribute="top" constant="8" id="ABq-Xn-Og4"/>
                                                 <constraint firstItem="YOh-9N-sPi" firstAttribute="leading" secondItem="8RT-0B-kvr" secondAttribute="leading" constant="8" id="SXe-sA-w2w"/>
                                                 <constraint firstAttribute="trailing" secondItem="YOh-9N-sPi" secondAttribute="trailing" constant="8" id="Z8j-Qy-Rbs"/>
-                                                <constraint firstAttribute="bottom" secondItem="YOh-9N-sPi" secondAttribute="bottom" id="bVz-ey-2JG"/>
+                                                <constraint firstAttribute="bottom" secondItem="YOh-9N-sPi" secondAttribute="bottom" constant="8" id="bVz-ey-2JG"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -172,7 +173,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.031372549020000001" green="0.086274509799999996" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Sjd-VM-QmC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5G2-Pb-RoP"/>
                             <constraint firstItem="Sjd-VM-QmC" firstAttribute="top" secondItem="IOB-QV-hnO" secondAttribute="bottom" id="9eM-tU-hgs"/>
@@ -253,4 +254,7 @@
             <point key="canvasLocation" x="305" y="399"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icDelete" width="36" height="36"/>
+    </resources>
 </document>

@@ -16,7 +16,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
     let categoryIdentifier = "Category"
     let carouselSegue = "CarouselSegue"
     
-    var rowCategoryHeight: CGFloat = 66
+    var rowCategoryHeight: CGFloat = 82
     var rowItemHeight: CGFloat = 44
     var categories = [Category(title: "Category", items: ["Item"])] {
         didSet {
