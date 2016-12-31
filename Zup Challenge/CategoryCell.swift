@@ -8,19 +8,20 @@
 
 import UIKit
 
-//protocol CategoryCellDelegate {
-//    func categoryCell(category: Category, newItem: String)
-//    func categoryCell(category: Category, removedItem index: Int)
-//}
+protocol CategoryCellDelegate {
+    func categoryCellUpdated()
+}
 
 class CategoryCell: UITableViewCell, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
-
-    let itemIdentifier = "Item"
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var itemField: UITextField!
     
+    let itemIdentifier = "Item"
+    let rowHeight: CGFloat = 44
+    
+    var delegate: CategoryCellDelegate?
     var category = Category() {
         didSet {
             tableView?.reloadData()
@@ -53,12 +54,25 @@ class CategoryCell: UITableViewCell, UITableViewDelegate, UITableViewDataSource,
         return cell
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return rowHeight
+    }
+    
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
     // MARK: - TextField Delegate
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        category.items.append(textField.text!)
-        tableView.reloadData()
-        textField.text = ""
+        if let text = textField.text {
+            if !text.isEmpty {
+                category.items.append(text)
+                tableView.reloadData()
+                delegate?.categoryCellUpdated()
+                textField.text = ""
+            }
+        }
         textField.resignFirstResponder()
         return true
     }
@@ -68,6 +82,7 @@ class CategoryCell: UITableViewCell, UITableViewDelegate, UITableViewDataSource,
     func deleteOnClick(sender: UIButton) {
         let index = sender.tag
         category.items.removeAtIndex(index)
+        delegate?.categoryCellUpdated()
         tableView.reloadData()
     }
     

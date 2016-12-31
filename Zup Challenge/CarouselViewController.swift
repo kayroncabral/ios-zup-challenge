@@ -56,11 +56,4 @@ class CarouselViewController: UIViewController, iCarouselDelegate, iCarouselData
         return cell
     }
     
-    func carousel(carousel: iCarousel, valueForOption option: iCarouselOption, withDefault value: CGFloat) -> CGFloat {
-        if (option == .Spacing) {
-            return value * 1.1
-        }
-        return value
-    }
-    
 }

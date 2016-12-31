@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CategoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
+class CategoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, CategoryCellDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var categoryNumberField: UITextField!
@@ -16,6 +16,8 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
     let categoryIdentifier = "Category"
     let carouselSegue = "CarouselSegue"
     
+    var rowCategoryHeight: CGFloat = 66
+    var rowItemHeight: CGFloat = 44
     var categories = [Category(title: "Category", items: ["Item"])] {
         didSet {
             tableView.reloadData()
@@ -43,10 +45,20 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         
         let category = categories[indexPath.row]
         
+        cell.delegate = self
         cell.categoryLabel.text = "\(category.title!) \(indexPath.row + 1)"
         cell.category = category
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        let category = categories[indexPath.row]
+        return rowCategoryHeight + (CGFloat(category.items.count) * rowItemHeight)
+    }
+    
+    func categoryCellUpdated() {
+        tableView.reloadData()
     }
     
     // MARK: - TextField Delegate
